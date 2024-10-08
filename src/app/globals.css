@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'daisyui/dist/full.css';
+@import 'swiper/swiper-bundle.css';
 
 :root {
   --background: #ffffff;
@@ -24,4 +26,24 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  
+}
+
+/* Estilos personalizados para as setas do Swiper */
+.swiper-button-next, .swiper-button-prev {
+  color: rgba(255, 255, 255, 0.7); /* Cor sutil */
+  background: transparent; /* Fundo transparente */
+  border: none;
+  font-size: 1.5rem; /* Tamanho menor */
+  transition: color 0.3s ease;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  color: rgba(255, 255, 255, 0.9); /* Realce na interação */
+}
+
+.custom-prev, .custom-next {
+  font-size: 1.2rem;
+  background: transparent;
 }

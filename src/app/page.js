@@ -1,100 +1,119 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="bg-gray-900 min-h-screen text-gray-100 overflow-x-hidden">
+      {/* Header simples com logo menor */}
+      <header className="py-4 bg-gray-800 shadow-md">
+        <div className="container mx-auto text-center">
+          <h1 className="text-3xl font-semibold text-pink-400">BookLove</h1>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </header>
+
+      {/* Seção Hero aprimorada */}
+      <section className="relative bg-gray-800 py-32">
+        <div className="container mx-auto text-center relative z-10">
+          <h2 className="text-6xl font-bold text-pink-400 drop-shadow-lg">
+            Preserve suas memórias de amor para sempre
+          </h2>
+          <p className="mt-6 text-2xl text-gray-300 max-w-2xl mx-auto drop-shadow-md">
+            Crie um livro de memórias único com seus momentos mais especiais, acessível em qualquer lugar, para sempre.
+          </p>
+          <button className="mt-10 bg-pink-600 text-white py-4 px-10 rounded-full text-lg shadow-lg hover:bg-pink-700 transition-transform transform hover:scale-105">
+            Começar Agora
+          </button>
+        </div>
+
+        {/* Sombras e elementos visuais adicionais */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-gray-900 opacity-60"></div>
+        <div className="absolute top-1/2 left-0 transform -translate-y-1/2 translate-x-10 bg-pink-400 w-40 h-40 rounded-full blur-2xl opacity-40"></div>
+        <div className="absolute bottom-0 right-0 transform translate-x-10 translate-y-10 bg-pink-600 w-64 h-64 rounded-full blur-3xl opacity-30"></div>
+      </section>
+
+      {/* Seção Benefícios */}
+      <section className="py-16">
+        <div className="container mx-auto text-center">
+          <h3 className="text-3xl font-bold text-pink-400 mb-8">Por que criar o BookLove?</h3>
+          <div className="flex justify-center space-x-8">
+            <div className="w-1/3">
+              <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h4 className="text-2xl font-semibold text-pink-400">Memórias preservadas</h4>
+                <p className="mt-4 text-gray-300">
+                  Mantenha seus momentos mais especiais eternamente guardados.
+                </p>
+              </div>
+            </div>
+            <div className="w-1/3">
+              <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h4 className="text-2xl font-semibold text-pink-400">Rápido e fácil</h4>
+                <p className="mt-4 text-gray-300">
+                  Crie seu livro em minutos com um formulário simples.
+                </p>
+              </div>
+            </div>
+            <div className="w-1/3">
+              <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h4 className="text-2xl font-semibold text-pink-400">Presente único</h4>
+                <p className="mt-4 text-gray-300">
+                  Um presente perfeito para aniversários ou datas especiais.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção de Preços */}
+      <section className="bg-gray-800 py-16">
+        <div className="container mx-auto text-center">
+          <h3 className="text-3xl font-bold text-pink-400 mb-8">Escolha seu Plano</h3>
+          <div className="flex justify-center space-x-8">
+            <div className="w-1/3 bg-gray-900 p-6 rounded-lg shadow-lg">
+              <h4 className="text-2xl font-semibold text-gray-100">Plano Inicial</h4>
+              <p className="mt-4 text-gray-300">3 memórias por R$19,90</p>
+              <p className="mt-2 text-gray-300">Contagem de dias do relacionamento</p>
+              <p className="mt-2 text-gray-300">Acesso por 1 ano</p>
+              <button className="mt-6 bg-pink-600 text-white py-2 px-6 rounded-full shadow-md hover:bg-pink-700">
+                Escolher Plano
+              </button>
+            </div>
+            <div className="w-1/3 bg-gray-900 p-6 rounded-lg shadow-lg border-4 border-pink-600">
+              <h4 className="text-2xl font-semibold text-gray-100">Plano Avançado</h4>
+              <p className="mt-4 text-gray-300">10 memórias por R$47,90</p>
+              <p className="mt-2 text-gray-300">Contagem de dias do relacionamento</p>
+              <p className="mt-2 text-gray-300">Acesso vitalício</p>
+              <button className="mt-6 bg-pink-600 text-white py-2 px-6 rounded-full shadow-md hover:bg-pink-700">
+                Escolher Plano
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testemunhos */}
+      <section className="py-16">
+        <div className="container mx-auto text-center">
+          <h3 className="text-3xl font-bold text-pink-400 mb-8">O que os casais dizem</h3>
+          <div className="flex justify-center space-x-8">
+            <div className="w-1/3">
+              <blockquote className="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <p className="text-lg text-gray-300">"O BookLove transformou nossas memórias em um presente inesquecível!"</p>
+                <cite className="block mt-4 text-gray-100 font-semibold">- Ana & João</cite>
+              </blockquote>
+            </div>
+            <div className="w-1/3">
+              <blockquote className="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <p className="text-lg text-gray-300">"Agora temos todas as nossas lembranças guardadas em um só lugar."</p>
+                <cite className="block mt-4 text-gray-100 font-semibold">- Maria & Pedro</cite>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 py-8">
+        <div className="container mx-auto text-center">
+          <p className="text-gray-400">© 2024 BookLove. Todos os direitos reservados.</p>
+        </div>
       </footer>
     </div>
   );
